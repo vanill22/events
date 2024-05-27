@@ -42,14 +42,30 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+
             ],
         ],
-        */
+        'assetManager' => [
+            'bundles' => [
+                'yii\bootstrap\BootstrapAsset' => [
+                    'sourcePath' => '@vendor/yiisoft/yii2-bootstrap/assets',
+                    'css' => [
+                        'css/bootstrap.css',
+                    ],
+                ],
+                'yii\bootstrap\BootstrapPluginAsset' => [
+                    'sourcePath' => '@vendor/yiisoft/yii2-bootstrap/assets',
+                    'js' => [
+                        'js/bootstrap.js',
+                    ],
+                ],
+            ],
+        ],
+
     ],
     'params' => $params,
 ];
